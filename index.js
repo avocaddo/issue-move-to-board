@@ -52,7 +52,8 @@ const updateIssueWithFieldNext = (projectRelayId, field, value, id) => {
 
 async function run() {
   try {
-    const issueNb= github.context.payload.issue.number;
+    //const issueNb= github.context.payload.issue.number;
+    let issueNb = 0;
     const owner = github.context.repo.owner;
     const repo = github.context.repo.repo;
     const label = github.context.payload.label.name;
@@ -73,13 +74,14 @@ async function run() {
       const shouldUpdateWithField = all && all.length > 2;
 
       if(message && message.length > 0) {
-        const comment = correctMessage(message, board, label);
-        const _ = await octokit.issues.createComment({
-          owner,
-          repo,
-          issue_number: issueNb,
-          body: comment
-        });
+        // const comment = correctMessage(message, board, label);
+        // const _ = await octokit.issues.createComment({
+        //   owner,
+        //   repo,
+        //   issue_number: issueNb,
+        //   body: comment
+        // });
+        issueNb = message;
       }
 
       const queryGetID = getIssue(repoOwner = owner, repoName = repo, issueNumber = issueNb);
