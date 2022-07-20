@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# actions-policy-wfs-called
-# actions-policy-wfs
-=======
-# GitHub Action - Issue Label Move to Board
+# GitHub Action - Issue Move to Board
 This GitHub Action allows you to add an issue to specific boards (with a given value to a metadata field) when specific labels are added to the issue.
 
 It runs every time a label is attached to an issue, and compares the label to the associated list of boards you specified. If a match is found, the action will add the issue to the given board.
@@ -141,7 +137,3 @@ jobs:
                   #board={boardID},{fieldID},{fieldValueID}
                   manhattan=PN_kwHOAmFUEs4AAzKJ,"MDE2OlByb2plY3ROZXh0RmllbGQxNzY0OTcy","69cd75ba"
 ```
-
-
-
->>>>>>> master
